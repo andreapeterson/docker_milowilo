@@ -1,0 +1,44 @@
+version: '3.8'
+services:
+  db:
+    build:
+      context: ./Docker-files/db
+    image: andreapeterson/milowilo-db
+    ports:
+      - "3306:3306"
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=milowilo123
+
+  cache:
+    image: memcached
+    ports:
+      - "11211:11211"
+
+  rmq:
+    image: rabbitmq
+    ports:
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+
+  app:
+    build:
+      context: ./Docker-files/app
+    image: andreapeterson/milowilo-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - appdata:/usr/local/tomcat/webapps
+
+  web:
+    build:
+      context: ./Docker-files/web
+    image: andreapeterson/milowilo-web
+    ports:
+      - "80:80"
+volumes:
+  data: {}
+  appdata: {}
