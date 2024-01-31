@@ -6,4 +6,6 @@ First, I found the base images on Dockerhub. Nginx, MySQL, and Tomcat needed cus
 Then, I created the docker compose file and customized the application.properties file for the application to communicate properly.
 Finally, I tested it on EC2 and made changes to fix bugs and once it was perfect, I pushed it the 3 custom containers to Dockerhub. Below is a picture of the final result.
 
+This is my first time working with Docker, and I was super excited to finally dive in and learn the lay of things. I started slow by creating my own custom image with my website as seen [here](https://hub.docker.com/repository/docker/andreapeterson/portfolio_img/general) and then did this project that is more complexwith the use of a docker compose file and multi-stage docker file. Next step: Kubernetes!
+
 <img width="1645" alt="Screenshot 2024-01-31 at 4 36 55 PM" src="https://github.com/andreapeterson/docker_milowilo/assets/134665743/617e7ae7-a97a-4302-acf0-b846a79376e5">
