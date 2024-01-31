@@ -1,6 +1,6 @@
 Whilst doing Imran Teli's course on Devops, we began to dive into Docker and containerization. Throughout the course, we worked on moving this multi-tier architecture from VM, to [AWS Cloud](https://github.com/andreapeterson/AWS-MultiTier-Architecture), then [reconstructing it in AWS Cloud](https://github.com/andreapeterson/AWS-Webapp-Beanstalk) to include more PaaS and SaaS services, and now finally containerizing it and running it on docker containers.
 
-Following the same schema as the other projects, I customized the webpage once again to feature my sweet pup on the login page. Once again, most of the files comes from [here](https://github.com/devopshydclub/vprofile-project/blob/docker/compose/docker-compose.yml). I customized some of the web files and created the Docker-files & compsoe file for this project.
+Following the same schema as the other projects, I customized the webpage once again to feature my sweet pup on the login page. Once again, most of the files comes from [here](https://github.com/devopshydclub/vprofile-project/blob/docker/compose/docker-compose.yml). I customized some of the web files and created the Docker-files & compose file for this project.
 
 First, I found the base images on Dockerhub. Nginx, MySQL, and Tomcat needed customization, so they have their own docker files and I created an image out of them on my [Dockerhub Account](https://hub.docker.com/u/andreapeterson).
 Then, I created the docker compose file and customized the application.properties file for the application to communicate properly.
